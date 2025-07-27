@@ -1,0 +1,11 @@
+{
+  "domain": "mysenec_local",
+  "name": "MySenec Local",
+  "version": "1.0.0",
+  "documentation": "https://github.com/JanFirlus/homeassistant-mysenec_local",
+  "requirements": [],
+  "codeowners": ["@JanFirlus"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "dependencies": []
+}
