@@ -3,9 +3,13 @@
     "step": {
       "user": {
         "data": {
-          "host": "SENEC IP-Adresse"
+          "host": "Hostname oder IP-Adresse der SENEC-Anlage"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zur SENEC-Anlage fehlgeschlagen",
+      "invalid_host": "Ungültiger Hostname oder IP"
     }
   }
 }
