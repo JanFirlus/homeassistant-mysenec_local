@@ -3,7 +3,7 @@
     "domain": "mysenec_local",
     "documentation": "https://github.com/JanFirlus/homeassistant-mysenec_local",
     "codeowners": ["@JanFirlus"],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "requirements": []
   }
   
