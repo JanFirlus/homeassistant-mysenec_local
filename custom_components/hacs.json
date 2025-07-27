@@ -1,0 +1,9 @@
+{
+    "name": "MySenec Local",
+    "domain": "mysenec_local",
+    "documentation": "https://github.com/JanFirlus/homeassistant-mysenec_local",
+    "codeowners": ["@JanFirlus"],
+    "version": "1.0.0",
+    "requirements": []
+  }
+  
