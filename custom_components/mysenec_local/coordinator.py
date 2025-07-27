@@ -1,6 +1,11 @@
 from datetime import timedelta
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from .const import DOMAIN, UPDATE_INTERVAL
+import logging
+
+
+_LOGGER = logging.getLogger(__name__)
+
 
 class MySenecDataUpdateCoordinator(DataUpdateCoordinator):
     def __init__(self, hass, api):
