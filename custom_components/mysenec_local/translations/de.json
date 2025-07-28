@@ -3,7 +3,8 @@
     "step": {
       "user": {
         "data": {
-          "host": "Hostname oder IP-Adresse der SENEC-Anlage"
+          "host": "Hostname oder IP-Adresse der SENEC-Anlage",
+          "interval": "Aktualisierungszeit (Empfohlen 15min)"
         }
       }
     },
