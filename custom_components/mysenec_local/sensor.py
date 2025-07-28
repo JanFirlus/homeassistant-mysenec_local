@@ -23,28 +23,25 @@ class SenecSensor(SensorEntity):
     def __init__(self, coordinator, key, name, unit):
         self._coordinator = coordinator
         self._key = key
-        self._name = name
-        self._unit = unit
+        self._attr_name = name
+        self._attr_native_unit_of_measurement = unit
+        self._attr_unique_id = f"mysenec_local_{key}"
+        self._attr_should_poll = False
 
     @property
-    def name(self):
-        return self._name
+    def available(self):
+        return self._coordinator.last_update_success
 
     @property
-    def state(self):
+    def native_value(self):
         return self._coordinator.data.get(self._key)
 
     @property
-    def unit_of_measurement(self):
-        return self._unit
+    def device_class(self):
+        if self._key == "battery_soc":
+            return "battery"
+        return "power"
 
-    @property
-    def unique_id(self):
-        return f"mysenec_local_{self._key}"
-
-    @property
-    def should_poll(self):
-        return False
 
     async def async_update(self):
         await self._coordinator.async_request_refresh()
