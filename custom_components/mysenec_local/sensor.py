@@ -1,18 +1,18 @@
 import logging
 from homeassistant.components.sensor import SensorEntity
-from homeassistant.const import POWER_WATT, PERCENTAGE
+from homeassistant.const import UnitOfPower, PERCENTAGE
 from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
 SENSOR_TYPES = {
-    "pv_power": ("PV-Erzeugung", POWER_WATT),
-    "grid_export": ("Einspeisung", POWER_WATT),
-    "grid_import": ("Bezug", POWER_WATT),
-    "house_consumption": ("Hausverbrauch", POWER_WATT),
+    "pv_power": ("PV-Erzeugung", UnitOfPower),
+    "grid_export": ("Einspeisung", UnitOfPower),
+    "grid_import": ("Bezug", UnitOfPower),
+    "house_consumption": ("Hausverbrauch", UnitOfPower),
     "battery_soc": ("Batterie SOC", PERCENTAGE),
-    "battery_charge": ("Batterie lädt", POWER_WATT),
-    "battery_discharge": ("Batterie entlädt", POWER_WATT),
+    "battery_charge": ("Batterie lädt", UnitOfPower),
+    "battery_discharge": ("Batterie entlädt", UnitOfPower),
 }
 
 async def async_setup_entry(hass, entry, async_add_entities):
